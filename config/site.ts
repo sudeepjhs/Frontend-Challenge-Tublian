@@ -6,7 +6,7 @@ export type SideBarItem = typeof siteConfig.sidebarItem[0]
 
 export const siteConfig = {
 	name: "Tublian",
-	description: "Make beautiful websites regardless of your design experience.",
+	description: "Frontend Challenge By Tublian",
 	navItems: [
 		{
 			label: "Home",
