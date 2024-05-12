@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.border-gradient-img {
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #fbda61 0%, #ff5acd 100%);
+}
+
+.border-gradient-active[data-active="true"] {
+  background: linear-gradient(
+        hsl(var(--nextui-background) / var(--nextui-background-opacity, 1)) 0 0
+      )
+      padding-box,
+    linear-gradient(to right, #fbda61, #ff5acd) border-box;
+  border: 2px solid transparent;
+}
