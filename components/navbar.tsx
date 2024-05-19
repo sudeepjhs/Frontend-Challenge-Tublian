@@ -1,26 +1,29 @@
 "use client";
 
-import { Link } from "@nextui-org/link";
 import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
   NavbarMenu,
-  NavbarMenuItem,
   NavbarMenuToggle,
-  Navbar as NextUINavbar,
+  Navbar as NextUINavbar
 } from "@nextui-org/navbar";
 import { Select, SelectItem } from "@nextui-org/select";
 
-import { siteConfig } from "@/config/site";
-import NextLink from "next/link";
 import { SearchNormal } from "iconsax-react";
+import NextLink from "next/link";
+import Sidebar from "./sidebar";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="flex-wrap pt-2" classNames={{
-      wrapper:"px-2"
-    }}>
+    <NextUINavbar
+      maxWidth="xl"
+      position="sticky"
+      className="flex-wrap pt-2"
+      classNames={{
+        wrapper: "px-2",
+      }}
+    >
       <div className="flex flex-col-reverse sm:flex-row w-full sm:items-center">
         <NavbarContent className="" justify="start">
           <NavbarBrand as="li" className="gap-3 w-full sm:max-w-fit">
@@ -42,7 +45,7 @@ export const Navbar = () => {
               placeholder="Sort By"
               defaultSelectedKeys={"all"}
               selectionMode="single"
-			  aria-label="sort by"
+              aria-label="sort by"
             >
               <SelectItem key={"highstreet"}>
                 Sort By high streetcred
@@ -58,25 +61,7 @@ export const Navbar = () => {
         </NavbarContent>
       </div>
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
+        <Sidebar />
       </NavbarMenu>
     </NextUINavbar>
   );

@@ -14,7 +14,7 @@ const SideBarLink: FC<SidebarLinkProps> = (props) => {
       className="flex h-9 items-center gap-2 rounded-lg data-[active=false]:text-default-500 data-[active=true]:bg-content1 p-4"
     >
       <props.Icon size={18} variant="Outline" />
-      <div className="hidden lg:block">{props.title}</div>
+      <div className=" block sm:hidden lg:block">{props.title}</div>
     </div>
   );
 };
