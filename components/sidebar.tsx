@@ -11,7 +11,7 @@ const SideBarLink: FC<SidebarLinkProps> = (props) => {
   return (
     <div
       data-active={props.active || false}
-      className="flex h-9 items-center gap-2 rounded-lg data-[active=false]:text-default-500 data-[active=true]:bg-content1 p-4"
+      className=" cursor-pointer flex h-9 items-center gap-2 rounded-lg data-[active=false]:text-default-500 data-[active=true]:bg-content1 p-4"
     >
       <props.Icon size={18} variant="Outline" />
       <div className=" block sm:hidden lg:block">{props.title}</div>
