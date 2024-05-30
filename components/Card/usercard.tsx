@@ -26,7 +26,7 @@ const UserCard: FC<UserCardProps> = ({ user, userInfo = [] }) => {
               src={user.profilePic}
             />
             <div className="grow">
-              <div className="flex flex-col gap-2 max-w-fit">
+              <div className="flex flex-col gap-2 max-w-fit justify-start">
                 <strong className="text-xl leading-8 font-bold">
                   {user.fullname}
                 </strong>
