@@ -30,7 +30,7 @@ const UserCard: FC<UserCardProps> = ({ user, userInfo = [] }) => {
                 <strong className="text-xl leading-8 font-bold">
                   {user.fullname}
                 </strong>
-                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-1 text-default-500 font-medium items-center">
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-1 text-default-500 font-medium sm:items-center">
                   <span>{user.location}</span>
                   <span className="hidden sm:block">
                     <Ellipse />
